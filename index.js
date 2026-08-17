@@ -10,6 +10,7 @@ const pool = new Pool({
   ssl: { rejectUnauthorized: false }
 });
 
+// Rota raiz
 app.get("/", (req, res) => {
   res.send("API de Doações funcionando!");
 });
@@ -41,7 +42,7 @@ app.get("/doacoes", async (req, res) => {
   }
 });
 
-
+// Inicialização do servidor
 app.listen(process.env.PORT || 3000, () => {
   console.log("Servidor rodando na porta 3000");
 });
